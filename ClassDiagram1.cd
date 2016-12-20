@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InvAddIn.addInButtonDefinition">
+    <Position X="6.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAEAAAAAIAAAAAAAAAACAAIA=</HashCode>
+      <FileName>addInButtonDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.addInForm">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABAgAgBECAAIAiICBCCAAACAOE7WAASIHAPAKBAEAA=</HashCode>
+      <FileName>addInForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Angle_chamf">
+    <Position X="6.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACEAAAAAAAAA=</HashCode>
+      <FileName>Angle_chamf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.chamf">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAABACAAAAAAAAAA=</HashCode>
+      <FileName>chamf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.chamfer">
+    <Position X="13.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAKAAgBAAAACAAABCAMA5EAAAEHAMAAAAAAE=</HashCode>
+      <FileName>chamfer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Con_">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <InheritanceLine Type="InvAddIn.Section" ManuallyRouted="true">
+      <Path>
+        <Point X="1.25" Y="3.204" />
+        <Point X="1.25" Y="5.985" />
+        <Point X="1.25" Y="5.985" />
+        <Point X="1.25" Y="6.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASEAAAAAAAAA=</HashCode>
+      <FileName>Con_.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Conus">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAgAAAAACAAAACAAgYAMgAACAQAABAAAE=</HashCode>
+      <FileName>Conus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Create">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Create.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Cyl">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <InheritanceLine Type="InvAddIn.Section" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.25" Y="3.204" />
+        <Point X="1.25" Y="3.625" />
+        <Point X="2.062" Y="3.625" />
+        <Point X="2.062" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Cyl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Cylinder">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAgACAAgAAAAACAAAACAAgYAEgAACAQAABAAAE=</HashCode>
+      <FileName>Cylinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Distance_chamf">
+    <Position X="4.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Distance_chamf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.fill">
+    <Position X="4" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>fill.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Filler">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgBAAAACAAAACAAAYFAAAEGAAAAAAAAE=</HashCode>
+      <FileName>Filler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.ImgTypeConv">
+    <Position X="9.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAABAA=</HashCode>
+      <FileName>ImgTypeConv.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Pol">
+    <Position X="2.25" Y="6.5" Width="1.5" />
+    <InheritanceLine Type="InvAddIn.Section" ManuallyRouted="true">
+      <Path>
+        <Point X="1.25" Y="3.204" />
+        <Point X="1.25" Y="6.001" />
+        <Point X="3" Y="6.001" />
+        <Point X="3" Y="6.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAACAAAA=</HashCode>
+      <FileName>Pol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Polyon">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAEAAACAAgAAAAACAAAACAAgYAEAAAGAQAABAAAE=</HashCode>
+      <FileName>Polyon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Section">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAABQAAAAAABAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Section.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.var_es">
+    <Position X="11.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IYAAAgAAIgQAAAAAgAAAAAAAKAAAAAAIhAEAAgQAAAA=</HashCode>
+      <FileName>var-es.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.DATA">
+    <Position X="2.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAggAAAAAAAAAQAAAIAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>var-es.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvAddIn.Properties.Resources">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="test.StandardAddInServer" BaseTypeListCollapsed="true">
+    <Position X="4.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAABAAABAAABAAAAAAAAAAEAAQAAAAAAAAAAIAAA=</HashCode>
+      <FileName>StandardAddInServer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

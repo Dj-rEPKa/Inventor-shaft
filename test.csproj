@@ -83,6 +83,9 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Autodesk.Inventor.Interop\v4.0_19.0.0.0__d84147f8b4276564\autodesk.inventor.interop.dll</HintPath>
     </Reference>
+    <Reference Include="ButtonTreeUC">
+      <HintPath>C:\Users\xdjre\Downloads\ButtonTreeUserControl\ButtonTreeUserControl\ButtonTreeUC\bin\Debug\ButtonTreeUC.dll</HintPath>
+    </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -104,54 +107,70 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="addInButtonDefinition.cs" />
-    <Compile Include="addInForm.cs">
+    <Compile Include="Forms\Groove\groove.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addInForm.Designer.cs">
+    <Compile Include="Forms\Groove\groove.Designer.cs">
+      <DependentUpon>groove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main\addInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main\addInForm.Designer.cs">
       <DependentUpon>addInForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Angle_chamf.cs" />
+    <Compile Include="Features\Angle_chamf.cs" />
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="chamf.cs" />
-    <Compile Include="chamfer.cs">
+    <Compile Include="Features\chamf.cs" />
+    <Compile Include="Forms\Chamfer\chamfer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="chamfer.Designer.cs">
+    <Compile Include="Forms\Chamfer\chamfer.Designer.cs">
       <DependentUpon>chamfer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conus.cs">
+    <Compile Include="Features\Circle.cs" />
+    <Compile Include="Forms\Conus\Conus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Conus.Designer.cs">
+    <Compile Include="Forms\Conus\Conus.Designer.cs">
       <DependentUpon>Conus.cs</DependentUpon>
     </Compile>
-    <Compile Include="Con_.cs" />
-    <Compile Include="Create.cs" />
-    <Compile Include="Cyl.cs" />
-    <Compile Include="Cylinder.cs">
+    <Compile Include="Forms\Ring\Ring.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cylinder.Designer.cs">
+    <Compile Include="Forms\Ring\Ring.Designer.cs">
+      <DependentUpon>Ring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ring.cs" />
+    <Compile Include="Sections\Con_.cs" />
+    <Compile Include="Create.cs" />
+    <Compile Include="Sections\Cyl.cs" />
+    <Compile Include="Forms\Cylinder\Cylinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cylinder\Cylinder.Designer.cs">
       <DependentUpon>Cylinder.cs</DependentUpon>
     </Compile>
-    <Compile Include="Distance_chamf.cs" />
-    <Compile Include="fill.cs" />
-    <Compile Include="Filler.cs">
+    <Compile Include="Features\Distance_chamf.cs" />
+    <Compile Include="Features\Feature.cs" />
+    <Compile Include="Features\fill.cs" />
+    <Compile Include="Forms\Fillet\Filler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Filler.Designer.cs">
+    <Compile Include="Forms\Fillet\Filler.Designer.cs">
       <DependentUpon>Filler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Features\Groove.cs" />
     <Compile Include="ImgTypeConv.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Pol.cs" />
-    <Compile Include="Polyon.cs">
+    <Compile Include="Sections\Pol.cs" />
+    <Compile Include="Forms\Polygon\Polyon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Polyon.Designer.cs">
+    <Compile Include="Forms\Polygon\Polyon.Designer.cs">
       <DependentUpon>Polyon.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -159,13 +178,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Section.cs" />
+    <Compile Include="Sections\Section.cs" />
+    <Compile Include="Features\slot.cs" />
+    <Compile Include="Forms\Slot\Slot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Slot\Slot.Designer.cs">
+      <DependentUpon>Slot.cs</DependentUpon>
+    </Compile>
     <Compile Include="StandardAddInServer.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="var-es.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="test.X.manifest" />
   </ItemGroup>
   <ItemGroup>
@@ -175,23 +202,32 @@
     <None Include="Readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="addInForm.resx">
+    <EmbeddedResource Include="Forms\Groove\groove.resx">
+      <DependentUpon>groove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main\addInForm.resx">
       <DependentUpon>addInForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="chamfer.resx">
+    <EmbeddedResource Include="Forms\Chamfer\chamfer.resx">
       <DependentUpon>chamfer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Conus.resx">
+    <EmbeddedResource Include="Forms\Conus\Conus.resx">
       <DependentUpon>Conus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cylinder.resx">
+    <EmbeddedResource Include="Forms\Cylinder\Cylinder.resx">
       <DependentUpon>Cylinder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Filler.resx">
+    <EmbeddedResource Include="Forms\Fillet\Filler.resx">
       <DependentUpon>Filler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Polyon.resx">
+    <EmbeddedResource Include="Forms\Polygon\Polyon.resx">
       <DependentUpon>Polyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Ring\Ring.resx">
+      <DependentUpon>Ring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Slot\Slot.resx">
+      <DependentUpon>Slot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,7 +256,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="imgs\sdelete.bmp" />
+    <EmbeddedResource Include="imgs\x_groove.bmp" />
+    <EmbeddedResource Include="imgs\x_ring.bmp" />
+    <EmbeddedResource Include="imgs\sdelete.bmp" />
+    <EmbeddedResource Include="imgs\x_xrelief.bmp" />
+    <EmbeddedResource Include="imgs\y_groove.bmp" />
+    <EmbeddedResource Include="imgs\y_ring.bmp" />
+    <EmbeddedResource Include="imgs\zz_customizeBTNimage.bmp" />
+    <EmbeddedResource Include="imgs\z_indicatorBTN_off.bmp" />
     <EmbeddedResource Include="imgs\conus.bmp" />
     <Content Include="imgs\chamfer.bmp" />
     <Content Include="imgs\chamfer_agle.bmp" />
@@ -229,6 +272,7 @@
     <Content Include="imgs\filler.bmp" />
     <Content Include="imgs\no_feature.bmp" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

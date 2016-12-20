@@ -15,7 +15,7 @@ namespace InvAddIn
         private static string ClientId;
         public static string _ClientId
         {
-            get 
+            get
             {
                 if (!String.IsNullOrEmpty(ClientId))
                     return var_es.ClientId;
@@ -26,13 +26,16 @@ namespace InvAddIn
         }
 
 
-        public static List<Section> list = new List<Section>();
-        public static List<chamf> features_list = new List<chamf>();
+        public static List<Section> list;
+        public static List<Section> _list;
+        public static List<chamf> chamfer_list;
+        public static List<SketchLine> lines;
+        public static List<Feature> feature_list;
 
         public static void Get_addInClassId(Type t)
         {
-           GuidAttribute gAttr = (GuidAttribute)GuidAttribute.GetCustomAttribute(t, typeof(GuidAttribute));
-           ClientId = "{" + gAttr.Value + "}";
+            GuidAttribute gAttr = (GuidAttribute)GuidAttribute.GetCustomAttribute(t, typeof(GuidAttribute));
+            ClientId = "{" + gAttr.Value + "}";
         }
 
         private static AssemblyDocument Doc;
@@ -40,13 +43,13 @@ namespace InvAddIn
         {
             get
             {
-                    return var_es.Doc;
+                return var_es.Doc;
             }
 
             set { var_es.Doc = value; }
         }
 
-       // public static AssemblyDocument assemb_doc;
+        // public static AssemblyDocument assemb_doc;
         public static PartDocument part_doc;
         public static PartComponentDefinition part_doc_def;
 
@@ -57,8 +60,9 @@ namespace InvAddIn
             Doc = (AssemblyDocument)var_es.InventorApp.ActiveDocument;
             if (String.IsNullOrEmpty(InventorApp.ActiveDocument.FullDocumentName))
                 throw new Exception();
-            
+
         }
+
 
         private static Bitmap[] imgs;
         public static Bitmap[] _imgs
@@ -75,21 +79,34 @@ namespace InvAddIn
             set { imgs = value; }
         }
 
-        public static string[] chamfer_right_text = { "no feature", "Fillet", "Chamfer" };
-        public static string[] chamfer_left_text = { "no feature", "Fillet", "Chamfer" };
+        public static string[] chamfer_right_text = { "no feature", "Fillet", "Chamfer", "Ring", "Groove", "Undefined" };
+        public static string[] chamfer_left_text = { "no feature", "Fillet", "Chamfer", "Ring", "Groove", "Undefined" };
         public static string[] section_text = { "Cylynder", "Conus", "Polygon" };
+        public static string[] side_text = { "Measure from the left edge", "Measure from the right edge" };
 
+        #region Combo Tree   
+
+
+        public static string[] text_left = { "no feature", "Fillet", "Chamfer" };
+        public static string[] text_mid = { "Cylynder", "Conus", "Polygon" };
+        public static string[] text_right = { "no feature", "Fillet", "Chamfer" };
+        public static string[] text_last = { "no feature", "Ring", "Groove", "Undefined" };
+
+
+
+        #endregion
         public static void img_find()
         {
             IList<Bitmap> imgs_list = new List<Bitmap>();
             try
             {
                 string[] fileEntries = Directory.GetFiles(@"imgs\", "*.bmp");
+
                 foreach (string fileName in fileEntries)
                 {
                     imgs_list.Add(new Bitmap(@"" + fileName));
                 }
-                
+
             }
             catch (Exception e1)
             {
@@ -98,9 +115,11 @@ namespace InvAddIn
             imgs = new Bitmap[imgs_list.Count];
             imgs_list.CopyTo(imgs, 0);
         }
+
+        public static Feature feature;
     }
 
-    public class DATA 
+    public class DATA
     {
         string _nick;
         public string Name
@@ -109,8 +128,8 @@ namespace InvAddIn
             set { _nick = value; }
         }
 
-        int _value;
-        public int Size
+        double _value;
+        public double Size
         {
             get { return _value; }
             set { _value = value; }
@@ -123,4 +142,6 @@ namespace InvAddIn
             set { _info = value; }
         }
     }
+
+
 }
